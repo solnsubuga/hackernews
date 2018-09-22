@@ -32,3 +32,7 @@ class CreateLink(graphene.Mutation):
             url=link.url,
             description=link.description
         )
+
+
+class Mutation(graphene.ObjectType):
+    create_link = CreateLink.Field()
